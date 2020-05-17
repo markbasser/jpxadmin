@@ -7,7 +7,8 @@ import random  # おみくじで使用
 bot = commands.Bot(command_prefix='/')
 token = os.environ['DISCORD_BOT_TOKEN']
 
-client = discord.Client()  # 接続に使用するオブジェクト
+# 接続に必要なオブジェクトを生成
+client = discord.Client()
 
 
 @client.event
@@ -26,90 +27,34 @@ async def on_message(message):
     if message.author.bot:  # ボットのメッセージをハネる
         return
 
-    if message.content == "goodmorning":
+    if message.content == "SOS":
         # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さん Good morning")  # f文字列（フォーマット済み文字列リテラル）
+        await message.channel.send(f"Dear {message.author.mention}　\n What's wrong? HELP sent. Please check DM✉.\n どうしましたか？HELP送信しました。DM✉を確認して下さい。")  # f文字列（フォーマット済み文字列リテラル）
         
-    if message.content == "/tip 29coin 10000 <@700176826282147851>":
+    if message.content == "sos":
         # チャンネルへメッセージを送信
-        await message.channel.send("/tip JPYN 3.9 "f"{message.author.mention}　  <:winmen:701341863789068288> 🌈Rains☔ 🥩29coin Thanks!<:JPYNdisco:698471276498649168> ")  # f文字列（フォーマット済み文字列リテラル）
+        await message.channel.send(f"Dear {message.author.mention}　\n What's wrong? HELP sent. Please check DM✉.\n どうしましたか？HELP送信しました。DM✉を確認して下さい。")  # f文字列（フォーマット済み文字列リテラル）
     
-    if message.content == "/tip 29coin 100000 <@700176826282147851>":
+    if message.content == "help":
         # チャンネルへメッセージを送信
-        await message.channel.send("/tip JPYN 39.29 "f"{message.author.mention}　  <:winmen:701341863789068288> 🌈Rains☔ 🍖🥩29coin Thanks!<:JPYNdisco:698471276498649168> ")  # f文字列（フォーマット済み文字列リテラル）  
+        await message.channel.send(f"Dear {message.author.mention}　\n HELP sent. Please check DM✉.\n HELP送信しました。DM✉を確認して下さい。")  # f文字列（フォーマット済み文字列リテラル）  
         
-    if message.content == "goodnight":
+    if message.content == "HELP":
         # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さん Good Night! Go to bed early♡")  # f文字列（フォーマット済み文字列リテラル）
+        await message.channel.send(f"Dear {message.author.mention}　\n HELP sent. Please check DM✉.\n HELP送信しました。DM✉を確認して下さい。")  # f文字列（フォーマット済み文字列リテラル）
 
-    if message.content == "おはよう":
+    if message.content == "DM":
         # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さん ☆おはようございます☆")  # f文字列（フォーマット済み文字列リテラル）
+        await message.channel.send(f"Dear {message.author.mention}　\n HELP sent. Please check DM✉.\n HELP送信しました。DM✉を確認して下さい。")  # f文字列（フォーマット済み文字列リテラル）
         
-    if message.content == "goodevening":
+    if message.content == "dm":
         # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さん　Good evening～☆" )  # f文字列（フォーマット済み文字列リテラル）
+        await message.channel.send(f"Dear {message.author.mention}　\n HELP sent. Please check DM✉.\n HELP送信しました。DM✉を確認して下さい。")  # f文字列（フォーマット済み文字列リテラル）
 
-    if message.content == "Hello":
-        # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention} ☆༺.Hello All.Everyone! Thank you!☆")  # f文字列（フォーマット済み文字列リテラル）
- 
-    if message.content == "こんにちは":
-        # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さん こんにちは☺️楽しんで！")  # f文字列（フォーマット済み文字列リテラル）
-
-    if message.content == "こんばんは":
-        # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さん こんばんは😃🌃早く休みましょう🎵")  # f文字列（フォーマット済み文字列リテラル）
-
-    if message.content == "おはよー":
-        # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さん GoodMorning♡")  # f文字列（フォーマット済み文字列リテラル）
-
-    if message.content == "おやすみなさい":
-        # チャンネルへメッセージを送信
-        await message.channel.send(f"{message.author.mention}さん Good Night! Have a good dream♡")  # f文字列（フォーマット済み文字列リテラル）
-
-    if message.content == "jp/jpyn":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip JPYN 10 "f"{message.author.mention}　 🔑<:JPYNdisco:698471276498649168> ")  # f文字列（フォーマット済み文字列リテラル）
-       
-    if message.content == "jp/ben":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip BEN 100 "f"{message.author.mention}　　🔑<:BENKEICOIN04:698471407650209832><:benkeicoinsl:698471387064696833>  Thank you♡")  # f文字列（フォーマット済み文字列リテラル）
-    
-    if message.content == "jp/bgpt":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip BGPT 100 "f"{message.author.mention}　 🔑<:BGPT02:698471366004965406> Thank you♡")  # f文字列（フォーマット済み文字列リテラル）
-    
-    if message.content == "jp/kenj":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip KENJ 100 "f"{message.author.mention}　 🔑<:BGPT02:698471366004965406> Thank you♡")  # f文字列（フォーマット済み文字列リテラル）
-    
-    if message.content == "jp/sprts":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip SPRTS 100 "f"{message.author.mention}　 🔑<:BGPT02:698471366004965406> Thank you♡")  # f文字列（フォーマット済み文字列リテラル）
-    
-    if message.content == "sb/jpyn":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip JPYN 10 "f"{message.author.mention}　 🔑<:JPYNdisco:698471276498649168> ")  # f文字列（フォーマット済み文字列リテラル）
-       
-    if message.content == "sb/ben":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip BEN 100 "f"{message.author.mention}　　🔑<:BENKEICOIN04:698471407650209832><:benkeicoinsl:698471387064696833>  Thank you♡")  # f文字列（フォーマット済み文字列リテラル）
-    
-    if message.content == "sb/bgpt":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip BGPT 100 "f"{message.author.mention}　 🔑<:BGPT02:698471366004965406> Thank you♡")  # f文字列（フォーマット済み文字列リテラル）
-    
-    if message.content == "sb/kenj":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip KENJ 100 "f"{message.author.mention}　 🔑<:BGPT02:698471366004965406> Thank you♡")  # f文字列（フォーマット済み文字列リテラル）
-    
-    if message.content == "sb/sprts":
-        # チャンネルへメッセージを送信
-        await message.channel.send("/tip SPRTS 100 "f"{message.author.mention}　 🔑<:BGPT02:698471366004965406> Thank you♡")  # f文字列（フォーマット済み文字列リテラル）
-    
+    elif message.content == "b/jpxzan":
+        # リアクションアイコンを付けたい
+        q = await message.channel.send("/info jpx ")
+        [await q.add_reaction(i) for i in ('⭕', '❌')]  # for文の内包表記  
    
     elif message.content == "b/link":
         # リアクションアイコンを付けたい
@@ -157,116 +102,116 @@ async def on_message(message):
         [await q.add_reaction(i) for i in ('⭕', '🔑')]  # for文の内包表記  
      
     
-    elif message.content == "./rain":
+    elif message.content == "x/rain":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /rain BGPT 60 ActiveUserOnly  <:BGPT02:698471366004965406><:good01:699581068285706301>🌈☔It Rains")
         [await q.add_reaction(i) for i in ('<:BGPT02:698471366004965406>', '🌈')]  # for文の内包表記
          
             
-    elif message.content == "./Rain":
+    elif message.content == "x/Rain":
         # リアクションアイコンを付けたい
         q = await message.channel.send("  /rain BEN 30 ActiveUserOnly  <:benkeicoinsl:698471387064696833>🌈☔It Rains<:jhlo:700932650944299098>")
         [await q.add_reaction(i) for i in ('<:BENKEICOIN04:698471407650209832>', '<:benkeicoinsl:698471387064696833>')]  # for文の内包表記
 
         
-    elif message.content == "./RAIN":
+    elif message.content == "x/RAIN":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /rain JPNY 50 ActiveUserOnly  <:JPYNdisco:698471276498649168>🌈☔It Rains<:jhlo:700932650944299098>")
         [await q.add_reaction(i) for i in ('<:JPYNdisco:698471276498649168>', '🌈')]  # for文の内包表記
         
    
-    elif message.content == "./RAin":
+    elif message.content == "x/RAin":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /rain KENJ 100 ActiveUserOnly  <:kenj:700136543003607101> 🌈☔It Rains<:jhlo:700932650944299098>")
         [await q.add_reaction(i) for i in ('<:kenj:700136543003607101>', '<:sangras01:699579409220370514>')]  # for文の内包表記
       
     
-    elif message.content == "./RAIn":
+    elif message.content == "x/RAIn":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /rain SPRTS 1000 ActiveUserOnly  <:sprts:699076413931782146> 🌈☔It Rains🌱")
         [await q.add_reaction(i) for i in ('<:sprts:699076413931782146>', '🌱')]  # for文の内包表記
         
         
    
-    elif message.content == "./throw":
+    elif message.content == "x/throw":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw BGPT 200 4 EquallyDistributed  <:good01:699581068285706301><:BGPT02:698471366004965406>Pls receive→/catch✋")
         [await q.add_reaction(i) for i in ('<:BGPT02:698471366004965406>', '<:good:699580636448423936>')]  # for文の内包表記
 
         
-    elif message.content == "./THROW":
+    elif message.content == "x/THROW":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw BEN 80 4 EquallyDistributed  <:benkeicoinsl:698471387064696833>Pls receive→/catch✋")
         [await q.add_reaction(i) for i in ('<:BENKEICOIN04:698471407650209832>', '<:good:699580636448423936>')]  # for文の内包表記
 
         
-    elif message.content == "./THrow":
+    elif message.content == "x/THrow":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw JPYN 100 4 EquallyDistributed  <:good01:699581068285706301><:JPYNdisco:698471276498649168>Pls receive→/catch✋")
         [await q.add_reaction(i) for i in ('<:JPYNdisco:698471276498649168>', '<:good01:699581068285706301>')]  # for文の内包表記
 
         
-    elif message.content == "./THRow":
+    elif message.content == "x/THRow":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw KENJ 400 4 EquallyDistributed  <:kenj:700136543003607101>Pls receive→/catch✋")
         [await q.add_reaction(i) for i in ('<:kenj:700136543003607101>', '<:good01:699581068285706301>')]  # for文の内包表記
 
 
-    elif message.content == "./THROw":
+    elif message.content == "x/THROw":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw BGPT 300 5 EquallyDistributed  <:good01:699581068285706301><:BGPT02:698471366004965406><:BGPT02:698471366004965406>Pls receive→/catch✋")
         [await q.add_reaction(i) for i in ('<:BGPT02:698471366004965406>', '<:good:699580636448423936>')]  # for文の内包表記
 
 
-    elif message.content == "./thunder":
+    elif message.content == "x/thunder":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /thunder BGPT 300 ActiveUserOnly  <:good:699580636448423936><:BGPT02:698471366004965406>thunder")
         [await q.add_reaction(i) for i in ('<:BGPT02:698471366004965406>', '<:BGPT02:698471366004965406>')]  # for文の内包表記
 
         
-    elif message.content == "./tHROW":
+    elif message.content == "x/tHROW":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw BGPT 500 4 AttenuationDistributed  <:BGPT02:698471366004965406><:good:699580636448423936>")
         [await q.add_reaction(i) for i in ('<:BGPT02:698471366004965406>', '<:jhlo:700932650944299098>')]  # for文の内包表記
     
     
-    elif message.content == "./thROW":
+    elif message.content == "x/thROW":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw BEN 100 4 AttenuationDistributed  <:benkeicoinsl:698471387064696833>Pls receive→/catch✋")
         [await q.add_reaction(i) for i in ('<:BENKEICOIN04:698471407650209832>', '<:good:699580636448423936>')]  # for文の内包表記
  
     
-    elif message.content == "./thrOW":
+    elif message.content == "x/thrOW":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw JPYN 100 4 AttenuationDistributed  <:JPYNdisco:698471276498649168>Pls receive→/catch✋")
         [await q.add_reaction(i) for i in ('<:JPYNdisco:698471276498649168>', '<:good01:699581068285706301>')]  # for文の内包表記
 
         
-    elif message.content == "./THRow":
+    elif message.content == "x/THRow":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /throw KENJ 1000 4 AttenuationDistributed  <:kenj:700136543003607101>Pls receive→/catch✋")
         [await q.add_reaction(i) for i in ('<:kenj:700136543003607101>', '<:good01:699581068285706301>')]  # for文の内包表記
 
         
-    elif message.content == "バカ":
+    elif message.content == "しね":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /tip dappuncoin 9314 "f"{message.author.mention}　💀🚫Prohibited terms💩💩")
         [await q.add_reaction(i) for i in ('💩', '🚫')]  # for文の内包表記
 
 
-    elif message.content == "FuckU":
+    elif message.content == "死ね":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /tip dappuncoin 9314 "f"{message.author.mention}　💩🚫Prohibited terms💩💩")
         [await q.add_reaction(i) for i in ('💩', '🚫')]  # for文の内包表記
 
 
-    elif message.content == "SHIT":
+    elif message.content == "SEX":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /tip dappuncoin 9314 "f"{message.author.mention}💩🚫Prohibited terms💩💩")
         [await q.add_reaction(i) for i in ('💩', '🚫')]  # for文の内包表記
       
     
-    elif message.content == "CUNT":
+    elif message.content == "sex":
         # リアクションアイコンを付けたい
         q = await message.channel.send(" /tip dappuncoin 9314 "f"{message.author.mention}💩🚫Prohibited terms💩💩")
         [await q.add_reaction(i) for i in ('💩', '🚫')]  # for文の内包表記
@@ -274,7 +219,7 @@ async def on_message(message):
         
         
 
-    elif message.content == "おみくじ":
+    elif message.content == "kuji":
         # Embedを使ったメッセージ送信 と ランダムで要素を選択
         embed = discord.Embed(title="おみくじ", description=f"{message.author.mention}さんの今日の運勢は！",
                               color=0x2ECC69)
@@ -288,25 +233,52 @@ async def on_message(message):
         await message.channel.send(embed=embed)
 
 
-    elif message.content == "omikuji":
-        # Embedを使ったメッセージ送信 と ランダムで要素を選択
-        embed = discord.Embed(title="☆OMIKUJI☆", description=f"{message.author.mention}Today!YourFortune!☆",
-                              color=0x2ECC69)
-        embed.set_thumbnail(url=message.author.avatar_url)
-        embed.add_field(name="[Today!YourFortune!] ",
-                        value=random.choice(('☆☆彡VeryVeryGood☆彡☆【Very Good! It ’s a very competitive day.】','☆VeryGoood!☆【It is a good day for the team. 】','Good☆彡！【It will be a convincing day. I can not expect much money.】'
-                                             ,'VeryGood【☆☆☆If you work with confidence, you will always get good results. ♡♡♡ Love luck is super berig】', 'GoodDay【☆☆Good chance! There is a result of attacking. ♡♡ For the time being, there is no problem! ?】', 'Good!【☆☆ If you change the usual theory, you will get good results. ♡♡ No change from the current situation】'
-                                             ,  'usuallyGood【☆☆Good results with participatory online games ♡ Not only games. Good luck if you go outside to meet】', 'good!【☆The current situation is unchanged ♡ No particular change Let it go！】',  'Good!【☆I do not need any advice】'
-                                             , 'It is normal [What is that! ? You probably think that is normal! There is no peony mochi from the shelf', 'Great evil [Great evil [▲▲ I am nauseous!]'
-                                             , 'Worst【▲Sorry! There is no opportunity. I think the loss is a win！】', 'Very worst!BAD【▲▲I m nauseous! Useless】')), inline=False)
-        await message.channel.send(embed=embed)
 
-
-
-    elif message.content == "!ダイレクトメッセージ":
+    elif message.content == "sos":
         # ダイレクトメッセージ送信
         dm = await message.author.create_dm()
-        await dm.send(f"{message.author.mention}さん Benkeis TwitchTV🎮 Followお願いね！ https://www.twitch.tv/benkeis ")
+        await dm.send(f"Dear {message.author.mention}\n\n🔸 Please feel free to ask questions to the officials around you if there is an emergency. \n Please check the SNS mentioned in .\n\n🔸緊急なら周りの役職者に気軽に質問して下さい。\n記載のSNSにて連絡付きますので確認して下さい。\n   👍 \n ✉ Thank you DM. \n\n ✅ Please check each JPX information here for your requirements. You can contact them through SNS. \n 🔶Discord (JPX Main Communication) https://discord.gg/y7erbdw \n 🔷Discord (JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin  \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN (JPX) Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷 JPYN (JPX) Telegram https://t.me/JPYNCOIN \n Exciting Now ⚡ \n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN \n\n ✉ DMありがとうございます。\n ✅ ご用件はこちらのそれぞれのJPX informationで確認して下さい。その中でSNSにて連絡を取る事が出来ます。\n🔶Discord(JPX Maord(JPX ord(JPX ord(JPX in Communication）https://discord.gg/y7erbdw　\n 🔷Discord(JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN(JPX)Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷JPYN(JPX)Telegram https://t.me/JPYNCOIN \n  Exciting Now⚡　\n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN ")
+
+
+
+
+    elif message.content == "SOS":
+        # ダイレクトメッセージ送信
+        dm = await message.author.create_dm()
+        await dm.send(f"Dear {message.author.mention}\n\n🔸 Please feel free to ask questions to the officials around you if there is an emergency. \n Please check the SNS mentioned in .\n\n🔸緊急なら周りの役職者に気軽に質問して下さい。\n記載のSNSにて連絡付きますので確認して下さい。\n\n   👍 \n ✉ Thank you DM. \n\n ✅ Please check each JPX information here for your requirements. You can contact them through SNS. \n 🔶Discord (JPX Main Communication) https://discord.gg/y7erbdw \n 🔷Discord (JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin  \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN (JPX) Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷 JPYN (JPX) Telegram https://t.me/JPYNCOIN \n Exciting Now ⚡ \n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN \n\n ✉ DMありがとうございます。\n ✅ ご用件はこちらのそれぞれのJPX informationで確認して下さい。その中でSNSにて連絡を取る事が出来ます。\n🔶Discord(JPX Maord(JPX ord(JPX ord(JPX in Communication）https://discord.gg/y7erbdw　\n 🔷Discord(JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN(JPX)Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷JPYN(JPX)Telegram https://t.me/JPYNCOIN \n  Exciting Now⚡　\n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN ")
+
+
+
+
+    elif message.content == "DM":
+        # ダイレクトメッセージ送信
+        dm = await message.author.create_dm()
+        await dm.send(f"Dear {message.author.mention} 👍 \n ✉ Thank you DM. \n\n ✅ Please check each JPX information here for your requirements. You can contact them through SNS. \n 🔶Discord (JPX Main Communication) https://discord.gg/y7erbdw \n 🔷Discord (JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin  \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN (JPX) Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷 JPYN (JPX) Telegram https://t.me/JPYNCOIN \n Exciting Now ⚡ \n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN \n\n ✉ DMありがとうございます。\n ✅ ご用件はこちらのそれぞれのJPX informationで確認して下さい。その中でSNSにて連絡を取る事が出来ます。\n🔶Discord(JPX Maord(JPX ord(JPX ord(JPX in Communication）https://discord.gg/y7erbdw　\n 🔷Discord(JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN(JPX)Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷JPYN(JPX)Telegram https://t.me/JPYNCOIN \n  Exciting Now⚡　\n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN ")
+
+
+
+
+    elif message.content == "dm":
+        # ダイレクトメッセージ送信
+        dm = await message.author.create_dm()
+        await dm.send(f"Dear {message.author.mention} 👍 \n ✉ Thank you DM. \n\n ✅ Please check each JPX information here for your requirements. You can contact them through SNS. \n 🔶Discord (JPX Main Communication) https://discord.gg/y7erbdw \n 🔷Discord (JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin  \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN (JPX) Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷 JPYN (JPX) Telegram https://t.me/JPYNCOIN \n Exciting Now ⚡ \n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN \n\n ✉ DMありがとうございます。\n ✅ ご用件はこちらのそれぞれのJPX informationで確認して下さい。その中でSNSにて連絡を取る事が出来ます。\n🔶Discord(JPX Maord(JPX ord(JPX ord(JPX in Communication）https://discord.gg/y7erbdw　\n 🔷Discord(JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN(JPX)Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷JPYN(JPX)Telegram https://t.me/JPYNCOIN \n  Exciting Now⚡　\n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN ")
+
+
+
+
+    elif message.content == "HELP":
+        # ダイレクトメッセージ送信
+        dm = await message.author.create_dm()
+        await dm.send(f"Dear {message.author.mention} 👍 \n ✉ Thank you DM. \n\n ✅ Please check each JPX information here for your requirements. You can contact them through SNS. \n 🔶Discord (JPX Main Communication) https://discord.gg/y7erbdw \n 🔷Discord (JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin  \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN (JPX) Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷 JPYN (JPX) Telegram https://t.me/JPYNCOIN \n Exciting Now ⚡ \n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN \n\n ✉ DMありがとうございます。\n ✅ ご用件はこちらのそれぞれのJPX informationで確認して下さい。その中でSNSにて連絡を取る事が出来ます。\n🔶Discord(JPX Maord(JPX ord(JPX ord(JPX in Communication）https://discord.gg/y7erbdw　\n 🔷Discord(JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN(JPX)Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷JPYN(JPX)Telegram https://t.me/JPYNCOIN \n  Exciting Now⚡　\n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN ")
+
+
+
+
+    elif message.content == "DM":
+        # ダイレクトメッセージ送信
+        dm = await message.author.create_dm()
+        await dm.send(f"Dear {message.author.mention} 👍 \n ✉ Thank you DM. \n\n ✅ Please check each JPX information here for your requirements. You can contact them through SNS. \n 🔶Discord (JPX Main Communication) https://discord.gg/y7erbdw \n 🔷Discord (JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin  \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN (JPX) Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷 JPYN (JPX) Telegram https://t.me/JPYNCOIN \n Exciting Now ⚡ \n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN \n\n ✉ DMありがとうございます。\n ✅ ご用件はこちらのそれぞれのJPX informationで確認して下さい。その中でSNSにて連絡を取る事が出来ます。\n🔶Discord(JPX Maord(JPX ord(JPX ord(JPX in Communication）https://discord.gg/y7erbdw　\n 🔷Discord(JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN(JPX)Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷JPYN(JPX)Telegram https://t.me/JPYNCOIN \n  Exciting Now⚡　\n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN ")
 
 
 client.run(token)
+
