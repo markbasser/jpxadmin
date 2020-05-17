@@ -250,7 +250,7 @@ async def on_message(message):
 
 
 
-    elif message.content == "DM":
+    elif message.content == "help":
         # ダイレクトメッセージ送信
         dm = await message.author.create_dm()
         await dm.send(f"Dear {message.author.mention} 👍 \n ✉ Thank you DM. \n\n ✅ Please check each JPX information here for your requirements. You can contact them through SNS. \n 🔶Discord (JPX Main Communication) https://discord.gg/y7erbdw \n 🔷Discord (JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin  \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN (JPX) Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷 JPYN (JPX) Telegram https://t.me/JPYNCOIN \n Exciting Now ⚡ \n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN \n\n ✉ DMありがとうございます。\n ✅ ご用件はこちらのそれぞれのJPX informationで確認して下さい。その中でSNSにて連絡を取る事が出来ます。\n🔶Discord(JPX Maord(JPX ord(JPX ord(JPX in Communication）https://discord.gg/y7erbdw　\n 🔷Discord(JPX information) https://discord.gg/czK9Z2s \n 🔷JPX Web! https://jpxcoin.theblog.me/ \n 🔷JPX Reddit https://www.reddit.com/user/jpxcoin \n 🔷JPX Twitter https://twitter.com/jpxcoin \n 🔷 JPYN(JPX)Twitter https://twitter.com/JPYNCOIN \n 🔷 JPX Telegram http://t.me/jpxcoins \n 🔷JPYN(JPX)Telegram https://t.me/JPYNCOIN \n  Exciting Now⚡　\n Copyright © 2020 Japan Excitement Coin (JPX) & JPYN ")
